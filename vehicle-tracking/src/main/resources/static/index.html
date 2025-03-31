@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Numadic Vehicle Tracking</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        #map { height: 500px; width: 100%; margin-top: 20px; }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+        }
+        th {
+            background-color: #f4f4f4;
+        }
+    </style>
+</head>
+<body>
+    <h1>Numadic Vehicle Tracking System</h1>
+
+    <form id="vehicleForm">
+        <input type="text" id="vehicleNumber" placeholder="Enter Vehicle Number" required>
+        <input type="text" id="licensePlate" placeholder="Enter License Plate" required>
+        <input type="number" id="latitude" placeholder="Latitude" required step="any">
+        <input type="number" id="longitude" placeholder="Longitude" required step="any">
+        <input type="text" id="model" placeholder="Vehicle Model" required>
+        <input type="text" id="owner" placeholder="Owner Name" required>
+        <button type="submit">Register Vehicle</button>
+    </form>
+
+    <h2>Registered Vehicles</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Latitude</th>
+                <th>License Plate</th>
+                <th>Longitude</th>
+                <th>Model</th>
+                <th>Owner</th>
+                <th>Vehicle Number</th>
+            </tr>
+        </thead>
+        <tbody id="vehicleList"></tbody>
+    </table>
+
+    <h2>Vehicle Locations</h2>
+    <div id="map"></div>
+
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
+
