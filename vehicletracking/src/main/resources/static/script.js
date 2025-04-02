@@ -105,3 +105,4 @@ document.addEventListener("DOMContentLoaded", function () {
     // Load vehicles when the page loads
     fetchVehicles();
 });
+
