@@ -7,14 +7,14 @@
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
         <version>3.4.4</version>
-        <relativePath/>
+        <relativePath/> <!-- lookup parent from repository -->
     </parent>
 
     <groupId>com.numadic</groupId>
-    <artifactId>vehicle-tracking</artifactId>
+    <artifactId>vehicletracking</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>vehicle-tracking</name>
-    <description>Spring Boot Vehicle Tracking Project</description>
+    <name>vehicletracking</name>
+    <description>Spring Boot Vehicle Tracking System</description>
 
     <properties>
         <java.version>17</java.version>
@@ -44,15 +44,11 @@
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
             <version>8.0.29</version> <!-- Use the latest version if needed -->
+            <scope>runtime</scope>
         </dependency>
 
-        <!-- JUnit 5 for Unit Testing -->
-        <dependency>
-            <groupId>org.junit.jupiter</groupId>
-            <artifactId>junit-jupiter-api</artifactId>
-            <version>5.7.2</version>
-            <scope>test</scope>
-        </dependency>
+        
+        
 
         <!-- Spring Boot Starter Test (for unit and integration testing) -->
         <dependency>
@@ -61,12 +57,18 @@
             <scope>test</scope>
         </dependency>
 
-        <!-- Lombok dependency -->
+        <!-- Lombok dependency for reducing boilerplate code -->
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
-            
             <scope>provided</scope>
+        </dependency>
+
+        <!-- Spring Security Test dependency for testing security -->
+        <dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-test</artifactId>
+            <scope>test</scope>
         </dependency>
     </dependencies>
 
@@ -86,4 +88,5 @@
             </plugin>
         </plugins>
     </build>
+
 </project>
